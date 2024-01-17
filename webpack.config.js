@@ -57,6 +57,11 @@ module.exports = (_, argv) => ({
           singleton: true,
           requiredVersion: deps["react-dom"],
         },
+        "@stomp/stompjs": {
+          singleton: true, // This ensures a single shared instance
+          // You might also want to specify the version, like so:
+          // requiredVersion: "specific-version-number"
+        },
       },
     }),
     new HtmlWebPackPlugin({
