@@ -3,14 +3,17 @@ import ReactDOM from "react-dom";
 
 import "./index.css";
 import Chat from "./chat/Chat";
-import {dumb} from "./dumb";
-import { initializeStomp} from "./listeners/stomp";
+import Question from "./chat/Question";
+import stompClient from "./stomp";
+// import { initializeStomp} from "./listeners/stomp";
 // import * as s from "./stomp.ts"
 
-initializeStomp();
+// initializeStomp();
 const App = () => (
+    <div>
+        <Chat/>
+        <Question/>
+    </div>
 
-
-  <Chat />
 );
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(<App/>, document.getElementById("app"));
